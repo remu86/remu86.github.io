@@ -1,4 +1,3 @@
-/* 確保您有這份新版樣式表，它負責圓形頭像與深海藍配色 */
 :root {
     --bs-primary: #325A82;
     --bs-secondary: #54728c;
@@ -49,13 +48,15 @@ h3 { font-size: 1.5rem; color: #333; }
         display: flex; flex-direction: column; width: 17rem; height: 100vh;
         background-color: var(--bs-primary) !important;
     }
-    #sideNav .navbar-brand { display: flex; margin: auto auto 0; padding: 0.5rem; }
     
-    /* 關鍵：大頭貼設定 */
+    /* 修正：將 margin: auto auto 0 改為 margin: 0 auto，讓圖片回到上方 */
+    #sideNav .navbar-brand { display: flex; margin: 0 auto; padding: 0.5rem; }
+    
+    /* 大頭貼設定 */
     #sideNav .navbar-brand .img-profile {
         width: 10rem; height: 10rem; max-width: 10rem; max-height: 10rem;
         border: 0.5rem solid rgba(255, 255, 255, 0.2);
-        object-fit: cover; object-position: center; /* 自動修正為完美圓形 */
+        object-fit: cover; object-position: center;
     }
     
     #sideNav .navbar-collapse { display: flex; align-items: flex-start; flex-grow: 0; width: 100%; margin-bottom: auto; }
